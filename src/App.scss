@@ -1,0 +1,45 @@
+$primary: #6084c7;
+$secondary: #364d79;
+
+.slide-content {
+  height: 50vh;
+  min-height: 300px;
+  background-color: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  input {
+    width: 80%;
+    background-color: transparent;
+    height: 100px;
+    font-size: 40px;
+    color: #fff;
+    border-color: $primary;
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 2px $primary;
+    }
+    &:hover {
+      border-color: $primary;
+    }
+  }
+  &.content-target {
+    background-color: $primary;
+    input {
+      border-color: $secondary;
+      &:focus {
+        border-color: $secondary;
+        box-shadow: 0 0 0 2px $secondary;
+      }
+      &:hover {
+        border-color: $secondary;
+      }
+    }
+  }
+  h3,
+  p {
+    color: #fff;
+    text-align: center;
+  }
+}

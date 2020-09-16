@@ -4,12 +4,15 @@ import { Provider } from 'react-redux';
 import store from './app/store';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
+import './matchMedia.mock';
+
+test('renders <App /> without crashing', () => {
+  const { getAllByText } = render(
     <Provider store={store}>
       <App />
     </Provider>
   );
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+  // Carousel first buttons
+  expect(getAllByText('1')).toHaveLength(2);
 });
